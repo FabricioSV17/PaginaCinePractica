@@ -59,6 +59,7 @@ body{
     font-family: var(--Roboto);
     letter-spacing: .5rem;
     transition: all .5s ease-in-out;
+    z-index: 11111;
 }
 .Encabezado.active .Encabezado__titulo{
     font-size: 3.4rem;
@@ -102,6 +103,19 @@ body{
 img{
     width: 100%;
 }
+.MenuHamburgesa{
+    display: none;
+    color: #fff;
+    font-size: 4rem;
+    cursor: pointer;
+}
+.Close{
+    display: none;
+    color: #fff;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
 .card{
     position: relative;
     margin-bottom: 1rem;
@@ -174,6 +188,7 @@ img{
     display: flex;
     align-items: center;
     gap: 8rem;
+    padding: 0 3rem;
 }
 .Hero__contenedor{
     width: 60%;
@@ -354,4 +369,41 @@ iframe{
 }
 .Beneficios__imagen img{
     width: 50%;
+}
+.flex{
+    display: flex;
+}
+.none{
+    display: none;
+}
+/* Modo Responsive en la pagina Cartelera */
+@media screen and (max-width:768px) {
+    .Menu{
+        display: none;
+    }
+    .Menu.activeMenu{
+        position: absolute;
+        display: flex;
+        opacity: 1;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 35rem;
+        height: 100vh;
+        background: #000;
+        top: 0;
+        right: 0;
+    }
+
+    .Menu.activeMenu .Enlace{
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+    .MenuHamburgesa{
+        display: flex;
+        z-index: 11111;
+    }
+    .Close{
+        z-index: 11111;
+    }
 }
